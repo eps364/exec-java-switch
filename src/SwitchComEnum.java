@@ -1,8 +1,3 @@
-/**
- * Exemplo de uso do switch com enum em Java. 
- * Compila com Java 8 ou superior.
- */
-
 public class SwitchComEnum {
 
     // Define um enum para os níveis de prioridade

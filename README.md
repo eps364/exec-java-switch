@@ -1,6 +1,6 @@
 # `Switch` Case em Java
 
-## A Evolução do `switch` em Java: Uma Jornada de Flexibilidade e Clareza
+## A Evolução do `switch` em Java
 
 A declaração `switch` em Java tem sido uma ferramenta fundamental para o controle de fluxo, permitindo que os desenvolvedores executem diferentes blocos de código com base no valor de uma variável. No entanto, o `switch` não é estático; ele passou por uma notável evolução ao longo das versões do Java, tornando-se cada vez mais poderoso, conciso e menos propenso a erros. Este artigo explora essa jornada, destacando as principais adições e transformações.
 
@@ -255,3 +255,39 @@ A jornada do `switch` em Java é um testemunho do compromisso da linguagem com a
 Ao escrever código Java moderno, especialmente com as versões mais recentes, é altamente recomendável adotar as **Expressões `switch`** e o **Pattern Matching para `switch`**. Eles não apenas tornam o código mais legível e elegante, mas também reduzem a chance de erros, elevando a qualidade e a manutenibilidade das suas aplicações.
 
 Essa evolução demonstra como o Java continua a se adaptar, fornecendo ferramentas mais robustas para os desafios de programação atuais.
+
+# Fonte
+
+### 1. `switch` Tradicional (com `int`, `enum`) e `switch` com `String` (Java 7)
+
+As especificações para o `switch` que opera com tipos primitivos (como `int`, `char`, `byte`, `short`), `enum`s e, a partir do Java 7, `String`s, podem ser encontradas no capítulo sobre **"Statements" (Declarações)** da JLS da versão correspondente.
+
+- **Java SE 7 (JLS 7):**
+    - **Capítulo 14.11. The `switch` Statement:** Este capítulo detalha a sintaxe e a semântica do `switch` statement, incluindo o comportamento de "fall-through" e a necessidade do `break`. A adição de `String` no `switch` foi um refinamento a essa seção.
+    - **Link:** Você pode encontrar a JLS 7 aqui: [The Java® Language Specification, Java SE 7 Edition](https://www.google.com/search?q=https://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html%23jls-14.11)
+    - **Específicamente para `enum`:** A capacidade de usar `enum`s em `switch` statements é inerente ao tipo `enum` em si, que pode ser convertido para um `int` ordinal internamente pelo compilador para fins de `switch`. A JLS 7 (e anteriores) aborda a validade dos tipos no seletor do `switch`.
+
+---
+
+### 2. Expressões `switch` (Java 14)
+
+As Expressões `switch` foram introduzidas como um "preview feature" no Java 12 e 13, e padronizadas no Java 14. A especificação principal para essa mudança é descrita em uma JEP (Java Enhancement Proposal) e refletida nas seções da JLS que tratam de expressões e declarações.
+
+- **JEP 361: Switch Expressions (Standard)**: Esta JEP detalha a motivação, o design e as mudanças na linguagem para introduzir as expressões `switch` e a nova sintaxe `case L ->`.
+    - **Link da JEP:** [JEP 361: Switch Expressions (Standard)](https://openjdk.org/jeps/361)
+- **Java Language Specification (JLS) para Java 14 (ou posterior):** As alterações foram integradas ao capítulo sobre "Expressions" (Expressões) e "Statements" (Declarações).
+    - **Capítulo 15.28. Switch Expressions:** Detalha a sintaxe e semântica das expressões `switch`.
+    - **Capítulo 14.11. The `switch` Statement:** Esta seção foi atualizada para incluir as novas "switch rules" (`case L ->`) que também podem ser usadas em `switch` statements (embora não retornem um valor).
+    - **Link (JLS 14 ou posterior):** Você pode consultar a JLS mais recente, que inclui essas especificações: [The Java® Language Specification (última versão)](https://www.google.com/search?q=https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html%23jls-14.11) (procure pelas seções `14.11` e `15.28` e as referências a `switch rules` e `switch expressions`).
+
+---
+
+### 3. Pattern Matching para `switch` (Java 21 - Padrão)
+
+O Pattern Matching para `switch` passou por várias fases de "preview" (Java 17, 18, 19, 20) antes de ser padronizado no Java 21. A especificação detalhada também é encontrada em uma JEP e, posteriormente, na JLS.
+
+- **JEP 441: Pattern Matching for `switch` (Standard)**: Esta JEP descreve a capacidade de usar padrões nos rótulos `case`, a cláusula `when`, e o tratamento explícito para `null`.
+    - **Link da JEP:** [JEP 441: Pattern Matching for switch (Standard)](https://openjdk.org/jeps/441)
+- **Java Language Specification (JLS) para Java 21:** As regras de Pattern Matching para `switch` estão integradas no capítulo de "Blocks, Statements, and Patterns".
+    - **Capítulo 14.11. The `switch` Statement (e subseções):** Esta seção foi significativamente expandida para cobrir `case` labels com padrões de tipo (`case Type t`), padrões guardados (`when`), e o `case null`.
+    - **Link (JLS 21):** [The Java® Language Specification, Java SE 21 Edition](https://www.google.com/search?q=https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html%23jls-14.11) (procure por "Pattern Matching for switch" e "case patterns").

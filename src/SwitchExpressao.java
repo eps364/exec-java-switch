@@ -1,7 +1,3 @@
-/*
- * Examplo de uso de Expressão Switch no Java
- * Compila com Java 12 ou superior.
- */
 public class SwitchExpressao {
     public static void main(String[] args) {
         int nivel = 2;

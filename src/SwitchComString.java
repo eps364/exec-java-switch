@@ -1,8 +1,3 @@
-/**
- * Exemplo de uso do switch com String em Java. 
- * Compila com Java 8 ou superior.
- */
-
 public class SwitchComString {
     public static void main(String[] args) {
         String comando = "iniciar";

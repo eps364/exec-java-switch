@@ -1,7 +1,3 @@
-/**
- * Exemplo de uso do switch tradicional em Java. Compila com Java 8 ou superior.
- */
-
 public class SwitchTradicional {
 
     public static void main(String[] args) {
