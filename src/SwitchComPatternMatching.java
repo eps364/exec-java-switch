@@ -15,15 +15,15 @@ public class SwitchComPatternMatching {
             case Email e -> "Email para " + e.destinatario() + " com assunto: " + e.assunto();
             case SMS s -> "SMS para " + s.numero() + ": " + s.mensagem();
             case Push p -> "Notificação Push para " + p.dispositivoId();
-            // Nenhuma cláusula default necessária aqui se todos os tipos de Notificacao forem cobertos
+            default -> "Tipo de notificação desconhecido.";
         };
         System.out.println("Processando Notificação (Pattern Matching): " + resultado1);
 
         String resultado2 = switch (obj) {
             case Integer i -> "Recebi um número inteiro: " + i;
-            case String s when s.length() > 10 -> "Recebi uma string longa: " + s; // Padrão guardado
+            case String s when s.length() > 10 -> "Recebi uma string longa: " + s; 
             case String s -> "Recebi uma string curta: " + s;
-            case null -> "O objeto é nulo!"; // Tratamento explícito para null
+            case null -> "O objeto é nulo!"; 
             default -> "Recebi um tipo desconhecido de objeto.";
         };
         System.out.println("Processando Objeto (Pattern Matching): " + resultado2);
